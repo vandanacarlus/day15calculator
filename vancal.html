@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vancalsi </title>
+    <style>
+        html {
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: brown;
+}
+
+*,
+*::before,
+*::after {
+  margin: 010px;
+  padding: 0;
+  box-sizing: inherit;
+}
+.calsi{
+    background-color: blue;
+    width: 30%;
+  border: 2px  solid black;
+  
+  color: #fff;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+    </style>
+</head>
+<body>
+    <h1 id="title">CALCULATOR </h1>
+    <p id="description">Simple Calculator helpful for students</p>
+    <div class = "container">
+        <div class=" calsi">
+            <input type="text" id="result" placeholder="only number" onchange="checkNumber(e);"><br>
+
+
+            <button onclick="clearScreen()" id="clear">C</button>
+        <button onclick="back('->')" class = "row1">-></button>
+        <button onclick="display('%')" class ="row1">%</button>
+        <button onclick="display('/')" class ="symbol">/</button><br>
+        <button onclick="display('7')" id = "7" class ="number">7</button>
+
+        <button onclick="display('8')"  id = "8" class ="number">8</button>
+
+        <button onclick="display('9')"  id = "9" class ="number">9</button>
+
+        <button onclick="display('*')" class ="symbol">*</button><br>
+
+        <button onclick="display('4')" id= "4" class ="number">4</button>
+
+        <button onclick="display('5')" id="5" class ="number">5</button>
+
+        <button onclick="display('6')" id = "6" class ="number">6</button>
+
+        <button onclick="display('-')" class ="symbol" id = "subtract">-</button><br>
+
+
+        <button onclick="display('1')"  id= "1" class ="number">1</button>
+
+        <button onclick="display('2')" id  ="2"class ="number">2</button>
+
+        <button onclick="display('3')"  id = "3" class ="number">3</button>
+
+        <button onclick="display('+')" class ="symbol" id = "add">+</button><br>
+
+
+        <button onclick="display('0')" class ="number zero">0</button>
+
+        <button onclick="display('.')" class ="number">.</button>
+
+        <button onclick="calculate()"  id = "equal">=</button>
+
+        </div>
+    </div>
+   
+     <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+         <script>
+function clearScreen() {
+    document.getElementById("result").value = "";
+    }
+    
+    
+    function display(value) {
+    document.getElementById("result").value += value;
+    }
+    
+    
+    function calculate() {
+    var p = document.getElementById("result").value;
+    var q = eval(p);
+document.getElementById("result").value = q;}
+
+
+// function display(value){
+
+    
+//     if(value.charCode>=48 && value.charCode<=57){
+//         // document.getElementById("result").value += value;
+//     }
+//     else{
+//      alert("only numbers")
+//     }
+    
+// }
+
+
+//  const result = document.getElementById('result');
+// console.log(result.value)
+
+    </script>
+</body>
+</html>
